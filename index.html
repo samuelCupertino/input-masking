@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=scr, initial-scale=1.0">
+        <title>Format Pattern</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="user-info">
+            <div class="profile">
+                <img src="https://avatars.githubusercontent.com/u/88355379?v=4">
+            </div>
+            <form>
+                <div class="data">
+                    <label>CEP:</label>
+                    <input type="text" placeholder="12345-678" onkeypress="applyMask(/^(\d{5})-(\d{3})$/)">
+                </div>
+                <div class="data">
+                    <label>RG:</label>
+                    <input type="text" placeholder="SP-12345678" onkeypress="applyMask(/^([a-zA-Z]{2})-(\d{8})$/)">
+                </div>
+                <div class="data">
+                    <label>CPF:</label>
+                    <input type="text" placeholder="111.222.333-44" onkeypress="applyMask(/^(\d{3})\.(\d{3})\.(\d{3})-(\d{2})$/)">
+                </div>
+                <div class="data">
+                    <label>Número:</label>
+                    <input type="text" placeholder="(11) 9 2222-3333" onkeypress="applyMask(/^\((\d{2})\) 9 (\d{4})-(\d{4})$/)">
+                </div>
+                <div class="data">
+                    <label>Cartão:</label>
+                    <input type="text" placeholder="1111 2222 3333 5555" onkeypress="applyMask(/^(\d{4}) (\d{4}) (\d{4}) (\d{4})$/)">
+                </div>
+            </form>
+        </div>
+        
+        <script src="script.js"></script>
+    </body>
+</html>

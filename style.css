@@ -1,0 +1,91 @@
+:root{
+    --color-primary: #006f90;
+    --color-secondary: #b3deca;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    font-size: 12pt;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    backdrop-filter: brightness(0.6);
+}
+.user-info {
+    position: relative;
+    width: 15rem;
+    margin: 0 auto;
+    background: linear-gradient(315deg, var(--color-primary), var(--color-secondary));
+    padding: 1rem;
+    border-radius: 10px;
+    max-height: 3rem;
+    overflow: hidden;
+    box-shadow: 3px 3px 5px rgb(0 70 90);
+    transition-duration: 1.5s;
+}
+.user-info:hover {
+    max-height: 20rem;
+}
+.user-info::before, 
+.user-info::after {
+    --img-size: 4rem;
+    content: '';
+    width: 100%;
+    background-size: var(--img-size);
+    background-repeat: no-repeat;
+    background-color: var(--color-primary);
+    position: absolute;
+    left: 0;
+    transition-duration: 1s;
+}
+.user-info::before {
+    height: 50%;
+    top: 0;
+    background-image: url(C:/Users/samue/Desktop/icon-lock-top.png);
+    background-position: bottom;
+}
+.user-info::after {
+    height: 55%;
+    bottom: 0;
+    background-image: url(C:/Users/samue/Desktop/icon-lock-bottom.png);
+    background-position: top;
+}
+.user-info:hover::before, 
+.user-info:hover::after {
+    height: 0%;
+    opacity: 0;
+}
+.user-info > .profile {
+    height: 5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.user-info > .profile > img {
+    height: 100%;
+    border-radius: 50rem;
+}
+.user-info > form {
+    display: grid;
+    gap: 10px;
+}
+.user-info form > .data {
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255 255 255 / 50%);
+    border-radius: 5px;
+}
+.user-info form > .data > label {
+    padding: 0 10px;
+}
+.user-info form > .data > input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+}
